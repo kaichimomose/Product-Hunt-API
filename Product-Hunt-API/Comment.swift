@@ -8,6 +8,10 @@
 
 import Foundation
 
+struct CommentsList: Decodable {
+    let comments: [Comment]
+}
+
 struct Comment {
     let body: String
     let name: String

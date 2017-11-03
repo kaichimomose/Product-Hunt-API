@@ -12,7 +12,7 @@ class Networking {
     let session = URLSession.shared
     let baseURL = "https://api.producthunt.com/v1"
     
-    func fetch(resource: Resource, completion: @escaping ([Any]) -> ()) {
+    func fetch(resource: Resource, completion: @escaping ([Decodable]) -> ()) {
         let fullUrl = baseURL + resource.path()
         var item = NSURLQueryItem()
         
@@ -20,6 +20,7 @@ class Networking {
         for (key, value) in resource.urlParameters() {
             item = NSURLQueryItem(name: key, value: value)
         }
+        
         components?.queryItems = [item as URLQueryItem]
         
         let url = components?.url

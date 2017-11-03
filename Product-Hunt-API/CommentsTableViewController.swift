@@ -21,8 +21,9 @@ class CommentsTableViewController: UITableViewController {
         if let id = id {
             Networking().fetch(resource: .comments(postId: id)) { (result) in
                 DispatchQueue.main.async {
+                    guard let commentsList = result as? [Comment] else {return}
                     self.commentsList = [Comment]()
-                    self.commentsList = result as! [Comment]
+                    self.commentsList = commentsList
                     self.tableView.reloadData()
                 }
                 
@@ -55,8 +56,8 @@ class CommentsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommentsTableViewCell", for: indexPath) as! CommentsTableViewCell
-        cell.usernameLabel.text = commentsList[indexPath.row].username
-        cell.bodyTextField.text = commentsList[indexPath.row].body
+        
+        cell.comment = commentsList[indexPath.row]
 
         return cell
     }

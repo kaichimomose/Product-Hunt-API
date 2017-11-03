@@ -15,10 +15,13 @@ class PostsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.rowHeight = 150
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 150
+    
         Networking().fetch(resource: .posts) { (result) in
             DispatchQueue.main.async {
-                self.list = result as! [Post]
+                guard let list = result as? [Post] else {return}
+                self.list = list
                 self.tableView.reloadData()
             }
             
@@ -55,9 +58,7 @@ class PostsTableViewController: UITableViewController {
         
         let raw = indexPath.item
         
-        cell.productNameLabel.text = list[raw].name
-        cell.taglineLabel.text = list[raw].tagline
-        cell.voteCountsLabel.text = String(list[raw].votesCount)
+        cell.post = list[raw]
 
         return cell
     }

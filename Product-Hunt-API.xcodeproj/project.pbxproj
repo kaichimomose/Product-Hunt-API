@@ -13,15 +13,13 @@
 		BF3AEAA51FAA774A006F0003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF3AEAA41FAA774A006F0003 /* Assets.xcassets */; };
 		BF3AEAA81FAA774A006F0003 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF3AEAA61FAA774A006F0003 /* LaunchScreen.storyboard */; };
 		BF3AEAB01FAA9E55006F0003 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3AEAAF1FAA9E55006F0003 /* Enums.swift */; };
-		BF3AEAB41FAAA2DB006F0003 /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3AEAB31FAAA2DB006F0003 /* Root.swift */; };
-		BF3AEAB61FAAA41B006F0003 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3AEAB51FAAA41B006F0003 /* Container.swift */; };
+		BF3AEAB61FAAA41B006F0003 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3AEAB51FAAA41B006F0003 /* Post.swift */; };
 		BF3AEABA1FAAAEB4006F0003 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3AEAB91FAAAEB4006F0003 /* Networking.swift */; };
 		BF3AEABC1FAABDF2006F0003 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3AEABB1FAABDF2006F0003 /* PostsTableViewController.swift */; };
 		BF3AEABE1FAABE14006F0003 /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3AEABD1FAABE14006F0003 /* PostsTableViewCell.swift */; };
 		BF3AEAC01FAABE25006F0003 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3AEABF1FAABE25006F0003 /* CommentsTableViewCell.swift */; };
 		BF3AEAC21FAABE39006F0003 /* CommentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3AEAC11FAABE39006F0003 /* CommentsTableViewController.swift */; };
-		BF3AEAC41FAB86E1006F0003 /* ContainerForComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3AEAC31FAB86E1006F0003 /* ContainerForComments.swift */; };
-		BF3AEAC61FAB88AC006F0003 /* RootForComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3AEAC51FAB88AB006F0003 /* RootForComments.swift */; };
+		BF3AEAC41FAB86E1006F0003 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3AEAC31FAB86E1006F0003 /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,15 +31,13 @@
 		BF3AEAA71FAA774A006F0003 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF3AEAA91FAA774A006F0003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF3AEAAF1FAA9E55006F0003 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
-		BF3AEAB31FAAA2DB006F0003 /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
-		BF3AEAB51FAAA41B006F0003 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		BF3AEAB51FAAA41B006F0003 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		BF3AEAB91FAAAEB4006F0003 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		BF3AEABB1FAABDF2006F0003 /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
 		BF3AEABD1FAABE14006F0003 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
 		BF3AEABF1FAABE25006F0003 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
 		BF3AEAC11FAABE39006F0003 /* CommentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewController.swift; sourceTree = "<group>"; };
-		BF3AEAC31FAB86E1006F0003 /* ContainerForComments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerForComments.swift; sourceTree = "<group>"; };
-		BF3AEAC51FAB88AB006F0003 /* RootForComments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootForComments.swift; sourceTree = "<group>"; };
+		BF3AEAC31FAB86E1006F0003 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +73,8 @@
 				BF3AEA9D1FAA774A006F0003 /* AppDelegate.swift */,
 				BF3AEA9F1FAA774A006F0003 /* ViewController.swift */,
 				BF3AEAAF1FAA9E55006F0003 /* Enums.swift */,
-				BF3AEAB31FAAA2DB006F0003 /* Root.swift */,
-				BF3AEAC51FAB88AB006F0003 /* RootForComments.swift */,
-				BF3AEAB51FAAA41B006F0003 /* Container.swift */,
-				BF3AEAC31FAB86E1006F0003 /* ContainerForComments.swift */,
+				BF3AEAB51FAAA41B006F0003 /* Post.swift */,
+				BF3AEAC31FAB86E1006F0003 /* Comment.swift */,
 				BF3AEAB91FAAAEB4006F0003 /* Networking.swift */,
 				BF3AEAA11FAA774A006F0003 /* Main.storyboard */,
 				BF3AEAA41FAA774A006F0003 /* Assets.xcassets */,
@@ -167,9 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF3AEAA01FAA774A006F0003 /* ViewController.swift in Sources */,
-				BF3AEAC61FAB88AC006F0003 /* RootForComments.swift in Sources */,
-				BF3AEAB41FAAA2DB006F0003 /* Root.swift in Sources */,
-				BF3AEAB61FAAA41B006F0003 /* Container.swift in Sources */,
+				BF3AEAB61FAAA41B006F0003 /* Post.swift in Sources */,
 				BF3AEABA1FAAAEB4006F0003 /* Networking.swift in Sources */,
 				BF3AEAB01FAA9E55006F0003 /* Enums.swift in Sources */,
 				BF3AEAC21FAABE39006F0003 /* CommentsTableViewController.swift in Sources */,
@@ -177,7 +169,7 @@
 				BF3AEABC1FAABDF2006F0003 /* PostsTableViewController.swift in Sources */,
 				BF3AEAC01FAABE25006F0003 /* CommentsTableViewCell.swift in Sources */,
 				BF3AEABE1FAABE14006F0003 /* PostsTableViewCell.swift in Sources */,
-				BF3AEAC41FAB86E1006F0003 /* ContainerForComments.swift in Sources */,
+				BF3AEAC41FAB86E1006F0003 /* Comment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

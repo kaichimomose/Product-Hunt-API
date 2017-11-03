@@ -12,4 +12,11 @@ class CommentsTableViewCell: UITableViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var bodyTextField: UITextView!
     
+    var comment: Comment? {
+        didSet {
+            usernameLabel.text = comment?.name
+            bodyTextField.text = comment?.body
+        }
+    }
+    
 }
