@@ -12,10 +12,12 @@ class CommentsTableViewController: UITableViewController {
     
     var commentsList = [Comment]()
     var id: Int?
+    var productName: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = 150
+        self.title = self.productName
         if let id = id {
             Networking().fetch(resource: .comments(postId: id)) { (result) in
                 DispatchQueue.main.async {

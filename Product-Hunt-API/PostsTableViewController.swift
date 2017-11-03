@@ -66,12 +66,14 @@ class PostsTableViewController: UITableViewController {
         
         let selectedPost = list[indexPath.row]
         let id = selectedPost.id
+        let productName =  selectedPost.name
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         let commentsTVC  = storyboard.instantiateViewController(withIdentifier: "CommentsTableViewController") as! CommentsTableViewController
         
         commentsTVC.id = id
+        commentsTVC.productName = productName
         
         self.navigationController?.pushViewController(commentsTVC, animated: true)
         
