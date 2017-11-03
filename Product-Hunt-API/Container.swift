@@ -9,6 +9,7 @@
 import Foundation
 
 struct Post {
+    let id: Int
     let name: String
     let tagline: String
     let votesCount: Int
@@ -16,6 +17,7 @@ struct Post {
 
 extension Post: Decodable {
     enum Keys: String, CodingKey {
+        case id
         case name
         case tagline
         case votesCount = "votes_count"
@@ -23,9 +25,10 @@ extension Post: Decodable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: Keys.self)
+        let id = try container.decode(Int.self, forKey: .id)
         let name = try container.decode(String.self, forKey: .name)
         let tagline = try container.decode(String.self, forKey: .tagline)
         let votesCount = try container.decode(Int.self, forKey: .votesCount)
-        self.init(name: name, tagline: tagline, votesCount: votesCount)
+        self.init(id: id, name: name, tagline: tagline, votesCount: votesCount)
     }
 }

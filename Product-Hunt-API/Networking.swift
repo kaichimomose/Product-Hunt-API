@@ -12,20 +12,37 @@ class Networking {
     let session = URLSession.shared
     let baseURL = "https://api.producthunt.com/v1"
     
-    func fetch(resource: Resource, completion: @escaping ([Post]) -> ()) {
+    func fetch(resource: Resource, completion: @escaping ([Any]) -> ()) {
         let fullUrl = baseURL + resource.path()
+        var item = NSURLQueryItem()
         
-        let url = URL(string: fullUrl)!
-        var request = URLRequest(url: url)
+        let components = NSURLComponents(string: fullUrl)
+        for (key, value) in resource.urlParameters() {
+            item = NSURLQueryItem(name: key, value: value)
+        }
+        components?.queryItems = [item as URLQueryItem]
+        
+        let url = components?.url
+        print(url ?? "")
+        
+//        let url = URL(string: pramUrl!)!
+        var request = URLRequest(url: url!)
         request.allHTTPHeaderFields = resource.header(token: "3c486e75957c3d8c0ee628b1cf0263782741826ad69cbf084e1d19317c1543cf")
         request.httpMethod = resource.httpMethod().rawValue
         
         session.dataTask(with: request) {(data, res, err) in
             if let data = data {
-                
-                let listPost = try? JSONDecoder().decode(ListPost.self, from: data)
-                guard let aListPost = listPost?.posts else {return}
-                completion(aListPost)
+                switch resource {
+                    case .posts:
+                        let postsList = try? JSONDecoder().decode(PostsList.self, from: data)
+                        guard let aPostsList = postsList?.posts else {return}
+                        completion(aPostsList)
+                    case .comments:
+                        let commentsList = try? JSONDecoder().decode(CommentsList.self, from: data)
+                        guard let aCommentsList = commentsList?.comments else {return}
+                        completion(aCommentsList)
+                    
+                }
             }
         }.resume()
     }

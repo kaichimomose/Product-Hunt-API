@@ -13,9 +13,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        Networking().fetch(resource: .posts) { (result) in
-            print(result[0].name)
-        }
+//        Networking().fetch(resource: .posts) { (result) in
+//            print(result[0].name)
+//        }
     }
 
     override func didReceiveMemoryWarning() {

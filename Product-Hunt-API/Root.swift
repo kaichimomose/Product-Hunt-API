@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct ListPost: Decodable {
+struct PostsList: Decodable {
     let posts: [Post]
 }

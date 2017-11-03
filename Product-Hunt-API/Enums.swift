@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum Class{
+    
+}
+
 enum HttpMethod: String {
     case get = "GET"
     case post = "POST"
@@ -15,7 +19,7 @@ enum HttpMethod: String {
 
 enum Resource {
     case posts
-    case comments(postId: String)
+    case comments(postId: Int)
     
     func httpMethod() -> HttpMethod {
         switch self {
@@ -30,7 +34,7 @@ enum Resource {
             return ["Accept": "application/json",
                     "Content-Type": "application/json",
                     "Authorization": "Bearer \(token)",
-                "Host": "api.producthunt.com"
+                    "Host": "api.producthunt.com"
             ]
         }
     }
@@ -49,7 +53,7 @@ enum Resource {
         case .posts:
             return [:]
         case .comments(let postId):
-            return ["search_id": postId]
+            return ["search[post_id]": String(postId)]
         }
     }
     

@@ -11,12 +11,14 @@ import UIKit
 class PostsTableViewController: UITableViewController {
 
     var list = [Post]()
+    var comments = [Comment]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.rowHeight = 150
         Networking().fetch(resource: .posts) { (result) in
             DispatchQueue.main.async {
-                self.list = result
+                self.list = result as! [Post]
                 self.tableView.reloadData()
             }
             
@@ -49,16 +51,35 @@ class PostsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PostsTableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PostsTableViewCell", for: indexPath) as! PostsTableViewCell
         
         let raw = indexPath.item
         
-        cell.textLabel?.text = list[raw].name
+        cell.productNameLabel.text = list[raw].name
+        cell.taglineLabel.text = list[raw].tagline
+        cell.voteCountsLabel.text = String(list[raw].votesCount)
 
         return cell
     }
     
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let selectedPost = list[indexPath.row]
+        let id = selectedPost.id
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let commentsTVC  = storyboard.instantiateViewController(withIdentifier: "CommentsTableViewController") as! CommentsTableViewController
+        
+        commentsTVC.id = id
+        
+        self.navigationController?.pushViewController(commentsTVC, animated: true)
+        
+    }
+    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

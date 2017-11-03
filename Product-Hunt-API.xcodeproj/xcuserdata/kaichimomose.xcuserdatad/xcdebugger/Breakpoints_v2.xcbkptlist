@@ -9,110 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Product-Hunt-API/PostsTableViewController.swift"
-            timestampString = "531286848.242877"
+            filePath = "Product-Hunt-API/CommentsTableViewController.swift"
+            timestampString = "531373102.159827"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Product-Hunt-API/PostsTableViewController.swift"
-            timestampString = "531286848.243522"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;Product_Hunt_API.Post&gt;) -&gt; () in Product_Hunt_API.PostsTableViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "Product-Hunt-API"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kaichimomose/Desktop/Product-Hunt-API/Product-Hunt-API/PostsTableViewController.swift"
-                  timestampString = "531286848.449703"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "228">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Array&lt;Product_Hunt_API.Post&gt;) -&gt; () in Product_Hunt_API.PostsTableViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "Product-Hunt-API"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kaichimomose/Desktop/Product-Hunt-API/Product-Hunt-API/PostsTableViewController.swift"
-                  timestampString = "531286848.453618"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "219">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Product-Hunt-API/PostsTableViewController.swift"
-            timestampString = "531286848.24401"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Product_Hunt_API.PostsTableViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "Product-Hunt-API"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kaichimomose/Desktop/Product-Hunt-API/Product-Hunt-API/PostsTableViewController.swift"
-                  timestampString = "531286848.463401"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "72">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;Product_Hunt_API.Post&gt;) -&gt; () in Product_Hunt_API.PostsTableViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "Product-Hunt-API"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kaichimomose/Desktop/Product-Hunt-API/Product-Hunt-API/PostsTableViewController.swift"
-                  timestampString = "531286848.471897"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "21">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
