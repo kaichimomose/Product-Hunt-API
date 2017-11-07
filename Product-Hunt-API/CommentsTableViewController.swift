@@ -16,7 +16,8 @@ class CommentsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.rowHeight = 150
+        self.tableView.rowHeight = 150//UITableViewAutomaticDimension
+//        self.tableView.estimatedRowHeight = 150
         self.title = self.productName
         if let id = id {
             Networking().fetch(resource: .comments(postId: id)) { (result) in
@@ -57,11 +58,18 @@ class CommentsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommentsTableViewCell", for: indexPath) as! CommentsTableViewCell
         
+        cell.userImage.layer.cornerRadius = 24
+        cell.userImage.layer.borderColor = UIColor.black.cgColor
+        cell.userImage.layer.borderWidth = 1
+        cell.userImage.layer.masksToBounds = true
         cell.comment = commentsList[indexPath.row]
 
         return cell
     }
     
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
 
     /*
     // Override to support conditional editing of the table view.
